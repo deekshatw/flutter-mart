@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mart/features/auth/presentation/screens/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_mart/features/home/presentation/screens/home_screen.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -12,6 +13,6 @@ void main() async {
   );
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: LoginScreen(),
+    home: HomeScreen(),
   ));
 }
