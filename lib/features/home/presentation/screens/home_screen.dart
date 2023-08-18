@@ -19,7 +19,15 @@ class _HomeScreenState extends State<HomeScreen> {
       bloc: homeBloc,
       listenWhen: (previous, current) => current is HomeActionState,
       buildWhen: (previous, current) => current is! HomeActionState,
-      listener: (context, state) {},
+      listener: (context, state) {
+        if (state is HomeNavigateToWishlistActionState) {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const WishlistScreen()));
+        } else if (state is HomeNavigateToCartActionState) {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const CartScreen()));
+        }
+      },
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
