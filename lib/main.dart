@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_mart/features/auth/presentation/screens/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_mart/features/home/presentation/screens/home_screen.dart';
 import 'firebase_options.dart';
