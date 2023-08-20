@@ -66,17 +66,14 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               body: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: GridView.builder(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2, // Number of columns in the grid
-                  ),
-                  itemCount: successState.products.length,
-                  itemBuilder: (context, index) {
-                    final product = successState.products[index];
-                    return HomeProductsWidget(
-                        products: product, homeBloc: homeBloc);
-                  },
-                ),
+                child: ListView.builder(
+                    itemCount: successState.products.length,
+                    itemBuilder: (context, index) {
+                      return HomeProductsWidget(
+                        products: successState.products[index],
+                        homeBloc: homeBloc,
+                      );
+                    }),
               ),
             );
 
