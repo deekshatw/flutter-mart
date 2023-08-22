@@ -7,4 +7,8 @@ abstract class CartActionState extends CartState {}
 
 final class CartInitial extends CartState {}
 
-class CartLoadingSuccessState extends CartState {}
+class CartLoadingSuccessState extends CartState {
+  final List<ProductModel> cartItems;
+
+  CartLoadingSuccessState(this.cartItems);
+}
